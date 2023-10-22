@@ -23,7 +23,7 @@ module.exports = {
             }
         ]
     },
-    devtool: 'source-map',
+    devtool: 'source-map', // Source maps for debugging
     devServer: {
         static: {
             directory: path.join(__dirname, 'dist'), // Serve content from the 'dist' directory
