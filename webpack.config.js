@@ -36,5 +36,6 @@ module.exports = {
         },
         compress: true,
         port: 3000, // Port for development server
+        hot: true, // Enable webpack's Hot Module Replacement feature
     },
 };
