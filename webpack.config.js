@@ -1,7 +1,7 @@
 const path = require("path");
 
 module.exports = {
-    mode: "development", // Set to "development" mode
+    mode: 'development', // Set to mode wether "development" or "production"
     entry: './src/index.js', // Entry point of your application
     output: {
         path: path.resolve(__dirname, 'dist'), // Output directory
@@ -23,7 +23,7 @@ module.exports = {
             }
         ]
     },
-    devtool: false,
+    devtool: 'source-map',
     devServer: {
         static: {
             directory: path.join(__dirname, 'dist'), // Serve content from the 'dist' directory
