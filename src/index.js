@@ -1,3 +1,5 @@
+import "./index.css";
+
 var marks = {
     maths: 80,
     science: 75,

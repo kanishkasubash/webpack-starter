@@ -1,4 +1,5 @@
 const path = require("path");
+const MiniCssExtractPlugin = require("mini-css-extract-plugin");
 
 module.exports = {
     mode: 'development', // Set to mode wether "development" or "production"
@@ -9,6 +10,10 @@ module.exports = {
     },
     module: {
         rules: [
+            {
+                test: /\.css$/i, // Match CSS files
+                use: [MiniCssExtractPlugin.loader, "css-loader"], // Use for CSS file per JS file which contains CSS
+            },
             {
                 test: /\.js$/, // Match JavaScript files
                 exclude: /node_modules/, // Exclude node_modules
@@ -23,6 +28,7 @@ module.exports = {
             }
         ]
     },
+    plugins: [new MiniCssExtractPlugin()],    
     devtool: 'source-map', // Source maps for debugging
     devServer: {
         static: {
