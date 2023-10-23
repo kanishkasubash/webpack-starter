@@ -3,7 +3,7 @@
   "name": "webpack-starter",
   "version": "1.0.0",
   "description": "Brings several new features and improvements over its predecessors.",
-  "main": "main.js",
+  "main": "main.jsx",
   "scripts": {
     "start": "webpack serve",
     "watch": "webpack --watch",

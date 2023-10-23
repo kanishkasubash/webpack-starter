@@ -4,7 +4,7 @@ const MiniCssExtractPlugin = require("mini-css-extract-plugin");
 module.exports = {
     mode: 'development', // Set to mode wether "development" or "production"
     target: 'web',
-    entry: './src/main.js', // Entry point of your application
+    entry: './src/main.jsx', // Entry point of your application
     output: {
         path: path.resolve(__dirname, 'dist'), // Output directory
         filename: 'main.js', // Output bundle filename
@@ -22,7 +22,7 @@ module.exports = {
                     loader: 'babel-loader', // Use Babel for JavaScript files
                     options: {
                         presets: [
-                            ['@babel/preset-env'],
+                            '@babel/preset-env',
                             ['@babel/preset-react', { runtime: 'automatic' }]
                         ]
                     }

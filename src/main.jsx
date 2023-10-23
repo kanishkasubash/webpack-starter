@@ -4,5 +4,5 @@ import './index.css'
 
 const root = createRoot(document.getElementById('app'));
 root.render(
-    <App tab="home" />
+    <App/>
 );
