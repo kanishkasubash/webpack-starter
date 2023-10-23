@@ -3,6 +3,7 @@ const MiniCssExtractPlugin = require("mini-css-extract-plugin");
 
 module.exports = {
     mode: 'development', // Set to mode wether "development" or "production"
+    target: 'web',
     entry: './src/index.js', // Entry point of your application
     output: {
         path: path.resolve(__dirname, 'dist'), // Output directory
@@ -12,7 +13,7 @@ module.exports = {
         rules: [
             {
                 test: /\.css$/i, // Match CSS files
-                use: [MiniCssExtractPlugin.loader, "css-loader"], // Use for CSS file per JS file which contains CSS
+                use: [MiniCssExtractPlugin.loader, "css-loader", "postcss-loader"], // Use for CSS file per JS file which contains CSS
             },
             {
                 test: /\.js$/, // Match JavaScript files
