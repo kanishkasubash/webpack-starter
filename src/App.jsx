@@ -1,8 +1,10 @@
-const App = () => (
-    <>
-        <h2>React App</h2>
-        <p>My First React App</p>
-    </>
-);
+const App = () => {
+    return (
+        <>
+            <h1>Webpack Starter Template</h1>
+            <p>React App</p>
+        </>
+    );
+};
 
-export default App
+export default App;
