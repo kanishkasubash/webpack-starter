@@ -1,23 +1,7 @@
-* {
-    margin: 0;
-    padding: 0;
-}
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
 
 body {
-    background-color: #2B3A42;
-    color: #ffffff;
-    font-family: Arial, Helvetica, sans-serif;
-    text-align: center;    
-}
-
-h1 {
-    text-transform: uppercase;
-    color: rgb(29, 120, 193);
-    margin: 1rem;
-}
-
-img {
-    width: 200px;
-    height: 100px;
-    margin: .5rem;
+    @apply bg-outer-space text-denim;
 }

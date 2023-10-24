@@ -1,5 +1,4 @@
 const path = require("path");
-const MiniCssExtractPlugin = require("mini-css-extract-plugin");
 const HtmlWebpackPlugin = require('html-webpack-plugin');
 
 module.exports = {
@@ -18,7 +17,7 @@ module.exports = {
         rules: [
             {
                 test: /\.css$/i, // Match CSS files
-                use: [MiniCssExtractPlugin.loader, "css-loader", "postcss-loader"], // Use for CSS file per JS file which contains CSS
+                use: ['style-loader', 'css-loader', 'postcss-loader'], // Use for CSS file per JS file which contains CSS
             },
             {
                 test: /\.(js|jsx)$/, // Match both .js and .jsx files
@@ -50,7 +49,6 @@ module.exports = {
             template: './index.html',
             publicPath: './',
         }),
-        new MiniCssExtractPlugin(),
     ],
     devtool: 'source-map', // Source maps for debugging
     devServer: {
