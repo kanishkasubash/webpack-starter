@@ -1,13 +1,14 @@
 {
   "name": "webpack-starter",
+  "private": true,
   "version": "1.0.0",
   "description": "Brings several new features and improvements over its predecessors.",
   "main": "main.jsx",
   "scripts": {
     "start": "webpack serve",
     "watch": "webpack --watch",
-    "build": "webpack --mode production --target browserslist --config webpack.config.js",
-    "build-dev": "webpack --mode development --target web --config webpack.config.js"
+    "build": "webpack --mode production --target browserslist --devtool false --config webpack.config.js",
+    "build-dev": "webpack"
   },
   "keywords": [],
   "author": "",
