@@ -3,5 +3,5 @@
 @tailwind utilities;
 
 body {
-    @apply bg-outer-space text-denim;
+    @apply bg-outer-space text-white;
 }

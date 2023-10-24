@@ -1,20 +1,30 @@
 import { useState } from "react";
-import webpackLogo from './assets/logo.png';
+import webpackLogo from './assets/webpack-logo.svg';
+import webpackChart from './assets/webpack-chart.png';
 
 const App = () => {
-    const [webpackLogoImg] = useState(webpackLogo);
+    const [img, setImg] = useState({
+        logo: webpackLogo,
+        heroImg: webpackChart
+    });
     return (
         <>
-            <main>
-                <div className="flex flex-row justify-center container mx-auto py-5">
+            <main className="container mx-auto">
+                <div className="flex flex-row justify-center py-5">
                     <img
-                        src={webpackLogoImg}
+                        src={img.logo}
                         alt="webpack-logo"
-                        width={100}
+                        width={200}
                         height={100}
                     />
                 </div>
-                <h1 className="text-4xl uppercase text-center">Webpack Starter Template</h1>
+                <h1 className="text-4xl text-malibu text-center">Starter Template</h1>
+                <div className="flex flex-row justify-center py-5">
+                    <img
+                        src={img.heroImg}
+                        alt="webpack-chart"
+                    />
+                </div>
             </main>
         </>
     );

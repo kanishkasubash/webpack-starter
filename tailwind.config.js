@@ -7,6 +7,7 @@ module.exports = {
       'malibu': '#8dd6f9',
       'fiord': '#465E69',
       'outer-space': '#2B3A42',
+      'white': '#ffffff',
     },
     extend: {},
   },
