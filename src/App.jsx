@@ -1,12 +1,7 @@
-import { useState } from "react";
 import webpackLogo from "./assets/webpack-logo.svg";
 import webpackChart from "./assets/webpack-chart.png";
 
 const App = () => {
-    const [img] = useState({
-        logo: webpackLogo,
-        heroImg: webpackChart
-    });
     return (
         <>
             <main className="container mx-auto">
@@ -21,7 +16,7 @@ const App = () => {
                 <h1 className="text-4xl text-center text-malibu">Starter Template</h1>
                 <div className="flex flex-row justify-center py-5">
                     <img
-                        src={img.heroImg}
+                        src={webpackChart}
                         alt="webpack-chart"
                     />
                 </div>
