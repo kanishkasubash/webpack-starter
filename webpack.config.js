@@ -1,13 +1,18 @@
 const path = require("path");
 const MiniCssExtractPlugin = require("mini-css-extract-plugin");
+const HtmlWebpackPlugin = require('html-webpack-plugin');
 
 module.exports = {
     mode: 'development', // Set to mode wether "development" or "production"
     target: 'web',
-    entry: './src/main.jsx', // Entry point of your application
+    entry: {
+        bundle: path.resolve(__dirname, 'src/main.jsx'), // Entry point of your application
+    },
     output: {
         path: path.resolve(__dirname, 'dist'), // Output directory
-        filename: 'main.js', // Output bundle filename
+        filename: '[name][contenthash].js', // Output bundle filename
+        clean: true,
+        assetModuleFilename: 'assets/[name][ext]',
     },
     module: {
         rules: [
@@ -24,23 +29,36 @@ module.exports = {
                         presets: [
                             '@babel/preset-env',
                             ['@babel/preset-react', { runtime: 'automatic' }]
-                        ]
-                    }
-                }
-            }
-        ]
+                        ],
+                    },
+                },
+            },
+            {
+                test: /\.(png|svg|jpg|jpeg|gif)$/i,
+                type: 'asset/resource',
+            },
+        ],
     },
     resolve: {
         extensions: ['.js', '.jsx'], // Allow importing .jsx files without specifying the extension
     },
-    plugins: [new MiniCssExtractPlugin()],
+    plugins: [
+        new HtmlWebpackPlugin({
+            title: 'Webpack Starter Template',
+            filename: 'index.html',
+            template: './index.html',
+        }),
+        new MiniCssExtractPlugin(),
+    ],
     devtool: 'source-map', // Source maps for debugging
     devServer: {
         static: {
-            directory: path.join(__dirname, 'dist'), // Serve content from the 'dist' directory
+            directory: path.resolve(__dirname, 'dist'), // Serve content from the 'dist' directory
         },
-        compress: true,
         port: 3000, // Port for development server
+        open: true,
         hot: true, // Enable webpack's Hot Module Replacement feature
+        compress: true,
+        historyApiFallback: true,        
     },
 };
