@@ -43,8 +43,8 @@ module.exports = {
     },
     plugins: [
         new HtmlWebpackPlugin({
-            title: 'Webpack Starter Template',
             favicon: './favicon.ico',
+            title: 'Webpack Starter Template',            
             filename: 'index.html',
             template: './index.html',
             publicPath: './',
