@@ -1,18 +1,15 @@
 import { useState } from "react";
-import laughing from './assets/laughing.svg'
+import webpackLogo from './assets/webpack-logo.svg';
 
 const App = () => {
-    const [laughingImg] = useState(laughing);
+    const [webpackLogoImg] = useState(webpackLogo);
     return (
         <>
-            <h1>Webpack Starter Template</h1>
-            <h2>React App with Webpack</h2>
             <img
-                src={laughingImg}
-                alt="laughing-emoji"
-                width={50}
-                height={50}
+                src={webpackLogoImg}
+                alt="webpack-logo"
             />
+            <h1>Webpack Starter Template</h1>
         </>
     );
 };

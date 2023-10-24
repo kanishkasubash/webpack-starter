@@ -34,7 +34,7 @@ module.exports = {
                 },
             },
             {
-                test: /\.(png|svg|jpg|jpeg|gif)$/i,
+                test: /\.(png|svg|jpg|jpeg|gif|ico)$/i,
                 type: 'asset/resource',
             },
         ],
@@ -45,8 +45,10 @@ module.exports = {
     plugins: [
         new HtmlWebpackPlugin({
             title: 'Webpack Starter Template',
+            favicon: './favicon.ico',
             filename: 'index.html',
             template: './index.html',
+            publicPath: './',
         }),
         new MiniCssExtractPlugin(),
     ],

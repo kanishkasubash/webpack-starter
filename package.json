@@ -11,8 +11,8 @@
     "build-dev": "webpack"
   },
   "keywords": [],
-  "author": "",
-  "license": "ISC",
+  "author": "Kanishka Priyashantha",
+  "license": "MIT",
   "devDependencies": {
     "@babel/core": "^7.23.2",
     "@babel/preset-env": "^7.23.2",
