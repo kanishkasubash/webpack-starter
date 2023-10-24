@@ -3,5 +3,9 @@
 @tailwind utilities;
 
 body {
-    @apply bg-outer-space text-white;
+    @apply text-white bg-outer-space;
+}
+
+p {
+    @apply px-4;
 }
