@@ -9,7 +9,11 @@ module.exports = {
       'outer-space': '#2B3A42',
       'white': '#ffffff',
     },
-    extend: {},
+    extend: {
+      fontFamily: {
+        montserrat: ['Montserrat', 'sans-serif'],
+      },
+    },
   },
   plugins: [],
 }

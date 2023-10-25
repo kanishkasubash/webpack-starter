@@ -1,5 +1,6 @@
-import webpackLogo from "./assets/webpack-logo.svg";
-import webpackChart from "./assets/webpack-chart.png";
+import SimpleImageSlider from "react-simple-image-slider";
+import { webpackLogo } from './assets';
+import { sliderImages } from './constants'
 
 const App = () => {
     return (
@@ -15,9 +16,14 @@ const App = () => {
                 </div>
                 <h1 className="text-4xl text-center text-malibu">Starter Template</h1>
                 <div className="flex flex-row justify-center py-5">
-                    <img
-                        src={webpackChart}
-                        alt="webpack-chart"
+                    <SimpleImageSlider
+                        width={1080}
+                        height={550}
+                        images={sliderImages}
+                        showBullets={true}
+                        showNavs={false}
+                        loop={true}
+                        autoPlay={true}
                     />
                 </div>
                 <p>Webpack 5 is a popular open-source JavaScript module bundler that is widely used in modern web development. It is an evolution of earlier versions of Webpack, and it brings several new features and improvements over its predecessors.</p>

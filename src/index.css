@@ -3,7 +3,7 @@
 @tailwind utilities;
 
 body {
-    @apply text-white bg-outer-space;
+    @apply text-white font-montserrat bg-outer-space;
 }
 
 p {
