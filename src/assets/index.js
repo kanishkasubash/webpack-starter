@@ -5,11 +5,15 @@ import sliderImage02 from "./slider-image-02.png";
 import sliderImage03 from "./slider-image-03.png";
 import sliderImage04 from "./slider-image-04.png";
 
+import copyrightSign from "./copyright-sign.svg";
+
 export {
     webpackLogo,
 
     sliderImage01,
     sliderImage02,
     sliderImage03,
-    sliderImage04
+    sliderImage04,
+
+    copyrightSign
 }

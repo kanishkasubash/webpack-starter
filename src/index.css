@@ -6,6 +6,8 @@ body {
     @apply text-white font-montserrat bg-outer-space;
 }
 
-p {
-    @apply px-4 py-3;
+@layer components {
+    .para {
+        @apply px-4 py-2;
+    }
 }

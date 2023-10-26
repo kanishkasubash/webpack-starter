@@ -8,6 +8,7 @@ module.exports = {
       'fiord': '#465E69',
       'outer-space': '#2B3A42',
       'white': '#ffffff',
+      'mine-shaft': '#333333'
     },
     extend: {
       fontFamily: {
