@@ -20,7 +20,7 @@ const App = () => {
                         width={1080}
                         height={550}
                         images={sliderImages}
-                        showBullets={true}
+                        showBullets={false}
                         showNavs={false}
                         loop={true}
                         autoPlay={true}
