@@ -14,10 +14,16 @@ const App = () => {
                         width={200}
                         height={100}
                     />
-                </div>                
+                </div>
                 <h1 className="text-4xl text-center text-malibu">Starter Template</h1>
                 <div className="flex flex-row justify-center my-5">
-                    <Carousel autoPlay={true} infiniteLoop={true} showStatus={false} showThumbs={false} showArrows={false} className=" lg:w-[70%]" >
+                    <Carousel
+                        autoPlay={true}
+                        infiniteLoop={true}
+                        showStatus={false}
+                        showThumbs={false}
+                        showArrows={false}
+                        className=" lg:w-[70%]" >
                         {sliderImages.map((image, index) => (
                             <div key={index}>
                                 <img src={image.url} />
