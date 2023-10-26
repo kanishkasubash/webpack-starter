@@ -7,5 +7,5 @@ body {
 }
 
 p {
-    @apply px-4;
+    @apply px-4 py-3;
 }
