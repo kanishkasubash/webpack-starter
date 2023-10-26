@@ -6,7 +6,7 @@ import { sliderImages } from './constants';
 const App = () => {
     return (
         <>
-            <main className="container grid justify-center grid-cols-1 mx-auto">
+            <main className="container grid grid-cols-1 mx-auto">
                 <div className="flex flex-row justify-center my-5">
                     <img
                         src={webpackLogo}
